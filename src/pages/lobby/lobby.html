@@ -23,9 +23,9 @@
     <ion-fab top right>
        <button ion-fab mini><ion-icon name="md-paw"></ion-icon></button>
        <ion-fab-list>
-         <button ion-fab><ion-icon name="md-home"></ion-icon></button>
-         <button ion-fab><ion-icon name="md-settings"></ion-icon></button>
-         <button ion-fab><ion-icon name="md-heart"></ion-icon></button>
+         <button ion-fab><ion-icon name="md-home" (click)="home()"></ion-icon></button>
+         <button ion-fab><ion-icon name="md-settings" (click)="settings()"></ion-icon></button>
+         <button ion-fab><ion-icon name="md-heart" (click)="favorites()"></ion-icon></button>
        </ion-fab-list>
      </ion-fab>
 
