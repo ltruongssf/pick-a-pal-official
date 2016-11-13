@@ -23,7 +23,7 @@ export class LobbyPage {
     puppy(){
         this.navCtrl.push(PuppyPage);
     }
-     favorites() {
+    favorites() {
         this.navCtrl.push(FavoritePage);
     }
     home() {

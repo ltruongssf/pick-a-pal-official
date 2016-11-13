@@ -23,4 +23,7 @@ export class LandingPage {
    register(){
         this.navCtrl.push(RegisterPage);
     }
+  //   reset () {
+  //     this.auth.passwordResetUrl();
+  // }
 }
