@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Login </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form #loginForm="ngForm" (ngSubmit)="signinForm(loginForm)" novalidate>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input name="email" type="email" [(ngModel)]="user.email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input name="password" type="password" [(ngModel)]="user.password" required></ion-input>
+    </ion-item>
+
+  <button ion-button type="submit" class="button-block">
+      Log In
+    </button>
+  </form>
+</ion-content>
