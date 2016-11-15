@@ -20,6 +20,7 @@ export class LobbyPage {
   ) {
     this.navCtrl = navCtrl;
  }
+ 
     puppy(){
         this.navCtrl.push(PuppyPage);
     }
@@ -32,6 +33,7 @@ export class LobbyPage {
     settings() {
       this.navCtrl.push(SettingsPage);
     }
+    
     
     logout() {
     this.usersRest.logout(window.localStorage.getItem('token'))

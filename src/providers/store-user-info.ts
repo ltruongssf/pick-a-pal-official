@@ -9,20 +9,20 @@ export class StoreUserInfo {
   constructor(public http: Http) {}
 
   register(newUserData) {
-    return this.http.post("https://strongloop-backend-ohheyitslisa.c9users.io/api/Users/", newUserData);
+    return this.http.post("https://midterm-backend-ohheyitslisa.c9users.io/api/Users/", newUserData);
 
 
   }
 
   login(credentials) {
-      return this.http.post("https://strongloop-backend-ohheyitslisa.c9users.io/api/Users/login", credentials);
+      return this.http.post("https://midterm-backend-ohheyitslisa.c9users.io/api/Users/login", credentials);
 
   }
 
 
  logout(token) {
     return this.http.post(
-      'https://strongloop-backend-ohheyitslisa.c9users.io/api/Users/logout'+
+      'https://midterm-backend-ohheyitslisa.c9users.io/api/Users/logout'+
         '?access_token=' + token, {}
         );
   }
