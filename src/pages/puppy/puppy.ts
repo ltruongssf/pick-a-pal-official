@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { RestorePetInfo } from '../../providers/restore-pet-info';
 
 @Component({
   selector: 'page-puppy',

@@ -5,6 +5,7 @@ import { PuppyPage } from '../puppy/puppy';
 import { FavoritePage } from '../favorite/favorite'; 
 import { StoreUserInfo } from '../../providers/store-user-info';
 import { SettingsPage } from '../settings/settings'; 
+import { RestorePetInfo } from '../../providers/restore-pet-info';
 
 
 @Component({
@@ -14,16 +15,25 @@ import { SettingsPage } from '../settings/settings';
 export class LobbyPage {
 
   constructor(public navCtrl: NavController,
-              public usersRest:StoreUserInfo
+              public usersRest:StoreUserInfo,
+              public petInfo: RestorePetInfo
   
   
   ) {
     this.navCtrl = navCtrl;
  }
  
-    puppy(){
-        this.navCtrl.push(PuppyPage);
+    // puppy(){
+    //   this.petInfo.petPage();
+    //   this.navCtrl.push(PuppyPage, {
+    //     id: 1
+    // });
+    // } 
+    
+    puppy() {
+      this.navCtrl.push(PuppyPage); 
     }
+  
     favorites() {
         this.navCtrl.push(FavoritePage);
     }

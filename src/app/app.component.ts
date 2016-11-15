@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 import { PreLandingPage } from '../pages/pre-landing/pre-landing';
-
+import { LobbyPage } from '../pages/lobby/lobby';
 
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = PreLandingPage;
+  rootPage = window.localStorage.getItem("token")?LobbyPage:PreLandingPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

@@ -12,6 +12,8 @@ import { PuppyPage } from '../pages/puppy/puppy';
 import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
 import { StoreUserInfo } from '../providers/store-user-info';
+import { RestorePetInfo } from '../providers/restore-pet-info';
+import { changePassword } from '../providers/change-password';
 
 const injections = [MyApp, AboutPage, ContactPage, 
 FavoritePage, LandingPage, LobbyPage, LoginPage, PreLandingPage, 
@@ -26,6 +28,6 @@ PuppyPage, RegisterPage, SettingsPage]
   ],
   bootstrap: [IonicApp],
   entryComponents: injections,
-  providers: [StoreUserInfo]
+  providers: [StoreUserInfo, RestorePetInfo, changePassword]
 })
 export class AppModule {}
