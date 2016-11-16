@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RestorePetInfo } from '../../providers/restore-pet-info';
+import { Slides } from 'ionic-angular';
 
 @Component({
   selector: 'page-puppy',
@@ -13,6 +14,11 @@ export class PuppyPage {
               public navCtrl: NavController,
               public restorePets: RestorePetInfo) {
     this.navCtrl = navCtrl;
+  }
+  
+  mySlideOptions = {
+    initialSlide: 1,
+    loop: true
   }
   
   ionViewDidLoad() {
@@ -31,12 +37,11 @@ export class PuppyPage {
     image: ""
     
   }
-  
   data = [];
   
-  displayPets() {
-
-    }
+  favorite() {}
+  
+  archiveItem () {}
 }
 
 

@@ -5,28 +5,16 @@
   </ion-navbar>
 </ion-header>
 
-<!--<ion-content class="puppy-page">-->
-<!--  <ion-slides pager>-->
-<!--    <ion-slide *ngFor="let pet of pets">-->
-
-<!--      <img [src]="pet.image" class="pet-image"/> -->
-<!--      <h2 class="slide-title" [innerHTML]="pet.title"></h2>-->
-<!--      <p [innerHTML]="pet.description"></p>-->
-<!--    </ion-slide>-->
-
-<!-- </ion-slides>-->
-<!--</ion-content>-->
-
 
 <ion-content>
   <ion-slides pager>
-<ion-item-options side="right">
-  <button ion-button (click)="favorite(item)">
-    <ion-icon name="favorite"></ion-icon>
-    Favorite
-  </button>
+<!--<ion-item-options side="right">-->
+<!--  <button ion-button (click)="favorite(item)">-->
+<!--    <ion-icon name="favorite"></ion-icon>-->
+<!--    Favorite-->
+<!--  </button>-->
 
-</ion-item-options>
+<!--</ion-item-options>-->
   
   <ion-slide class="puppy-page" *ngFor="let pet of data">
     <img [src]="pet.image" class="pet-image"/> 
@@ -37,7 +25,7 @@
 
 
 <ion-item-options side="left">
-  <button ion-button (click)="archive(item)">
+  <button ion-button (click)="archiveItem(item)">
     <ion-icon name="archive"></ion-icon>
     Archive
   </button>
