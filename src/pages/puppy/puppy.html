@@ -1,18 +1,47 @@
+
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Pick-a-Pal</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="prelanding-page">
+<!--<ion-content class="puppy-page">-->
+<!--  <ion-slides pager>-->
+<!--    <ion-slide *ngFor="let pet of pets">-->
+
+<!--      <img [src]="pet.image" class="pet-image"/> -->
+<!--      <h2 class="slide-title" [innerHTML]="pet.title"></h2>-->
+<!--      <p [innerHTML]="pet.description"></p>-->
+<!--    </ion-slide>-->
+
+<!-- </ion-slides>-->
+<!--</ion-content>-->
+
+
+<ion-content>
   <ion-slides pager>
-    <ion-slide *ngFor="let slide of slides">
-     
-      <img [src]="slide.image" class="slide-image"/>
-      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description"></p>
-    </ion-slide>
-      
+<ion-item-options side="right">
+  <button ion-button (click)="favorite(item)">
+    <ion-icon name="favorite"></ion-icon>
+    Favorite
+  </button>
+
+</ion-item-options>
+  
+  <ion-slide class="puppy-page" *ngFor="let pet of data">
+    <img [src]="pet.image" class="pet-image"/> 
+    <h2 class="slide-title" [innerHTML]="pet.name"></h2>
+    <p [innerHTML]="pet.info"></p>
+     <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>  <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+</ion-slide>
+
+
+<ion-item-options side="left">
+  <button ion-button (click)="archive(item)">
+    <ion-icon name="archive"></ion-icon>
+    Archive
+  </button>
+</ion-item-options>
 
   </ion-slides>
 </ion-content>

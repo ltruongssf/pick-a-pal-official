@@ -15,10 +15,13 @@ export class RestorePetInfo {
     console.log('Hello RestorePetInfo Provider');
   }
  
-  get(token) {
-    return this.http.get("https://midterm-backend-ohheyitslisa.c9users.io/Pets" +
+  getPetData(token) {
+    return this.http.get("https://midterm-backend-ohheyitslisa.c9users.io/api/Pets/" +
         '?access_token=' + token
     );
   }
 
+// getPetData() {
+//   return this.http.get("https://midterm-backend-ohheyitslisa.c9users.io/api/Pets/");
+// }
 }
