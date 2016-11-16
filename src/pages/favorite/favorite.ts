@@ -34,8 +34,12 @@ export class FavoritePage {
     
   }
   data = [];
+  
+//   removePost(post){
+//     let index = this.data.indexOf(post);
 
-  
-  
-  
+//     if(index > -1){
+//       this.data.splice(index, 1);
+//     }
+//     }
 }
