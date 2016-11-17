@@ -16,7 +16,7 @@ export class FavoriteRest {
   }
 
   getPetInfo(user_ID,token) {
-       return this.http.get("https://midterm-backend-ohheyitslisa.c9users.io/api/MyFavorites"+'?filter[where][user_ID]=' + user_ID +
+       return this.http.get("https://midterm-backend-ohheyitslisa.c9users.io/api/MyFavorites/getRequests"+'?filter[where][user_ID]=' + user_ID +
            '&access_token=' + token
        );
      }
