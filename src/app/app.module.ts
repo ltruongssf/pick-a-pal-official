@@ -14,6 +14,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { StoreUserInfo } from '../providers/store-user-info';
 import { RestorePetInfo } from '../providers/restore-pet-info';
 import { changePassword } from '../providers/change-password';
+import { FavoriteRest } from '../providers/favorite-rest';
 
 const injections = [MyApp, AboutPage, ContactPage, 
 FavoritePage, LandingPage, LobbyPage, LoginPage, PreLandingPage, 
@@ -28,6 +29,6 @@ PuppyPage, RegisterPage, SettingsPage]
   ],
   bootstrap: [IonicApp],
   entryComponents: injections,
-  providers: [StoreUserInfo, RestorePetInfo, changePassword]
+  providers: [StoreUserInfo, RestorePetInfo, changePassword, FavoriteRest]
 })
 export class AppModule {}

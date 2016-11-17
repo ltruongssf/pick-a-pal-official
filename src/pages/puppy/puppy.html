@@ -7,29 +7,47 @@
 
 
 <ion-content>
+  <ion-list>
   <ion-slides pager>
+
+
+  <ion-slide class="puppy-page" *ngFor="let pet of data">
+    <img [src]="pet.image" class="pet-image"/>
+    <h2 class="slide-title" [innerHTML]="pet.name"></h2>
+    <p [innerHTML]="pet.info"></p>
+     
+     
+     <!-- buttons for eah page that has left or right --> 
+         <button ion-button icon-left (click)="archive(item)">
+      <ion-icon name="star"></ion-icon>
+      Archive
+    </button>
+
+        <button ion-button icon-right (click)="savePet(pet)">
+        Favorite
+        <ion-icon name="star"></ion-icon>
+      </button>
+
+     
+     
+</ion-slide>
+
 <!--<ion-item-options side="right">-->
-<!--  <button ion-button (click)="favorite(item)">-->
+<!--  <button ion-button (click)="savePet(pet)">-->
 <!--    <ion-icon name="favorite"></ion-icon>-->
 <!--    Favorite-->
 <!--  </button>-->
 
 <!--</ion-item-options>-->
-  
-  <ion-slide class="puppy-page" *ngFor="let pet of data">
-    <img [src]="pet.image" class="pet-image"/> 
-    <h2 class="slide-title" [innerHTML]="pet.name"></h2>
-    <p [innerHTML]="pet.info"></p>
-     <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>  <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
-</ion-slide>
 
 
-<ion-item-options side="left">
-  <button ion-button (click)="archiveItem(item)">
-    <ion-icon name="archive"></ion-icon>
-    Archive
-  </button>
-</ion-item-options>
+<!--<ion-item-options side="left">-->
+<!--  <button ion-button (click)="archive(item)">-->
+<!--    <ion-icon name="archive"></ion-icon>-->
+<!--    Archive-->
+<!--  </button>-->
+<!--</ion-item-options>-->
 
   </ion-slides>
+  </ion-list>
 </ion-content>

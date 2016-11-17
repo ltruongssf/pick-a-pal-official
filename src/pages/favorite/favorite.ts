@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
 import { RestorePetInfo } from '../../providers/restore-pet-info';
+import { FavoriteRest } from '../../providers/favorite-rest';
 
 
 @Component({
@@ -14,10 +15,15 @@ export class FavoritePage {
  
    constructor(
               public navCtrl: NavController,
-              public restorePets: RestorePetInfo) {
+              public restorePets: RestorePetInfo,
+              public displayFav: FavoriteRest
+              ) {
     this.navCtrl = navCtrl;
+    // displayFav.getPetInfo();
   }
   
+  
+    
   ionViewDidLoad() {
     
     this.restorePets.getPetData(this.pets)
@@ -27,13 +33,36 @@ export class FavoritePage {
   	      console.log(data);
     });
   }
-   pets = {
+  
+  pets = [{
     name: "",
     info: "",
     image: ""
+  }]
+  
+  // diplayFavorites() {
+  //   this.displayFav();
     
+  // }
+
+  data = []; 
+  removeItem(item) { 
+ 
+    // for(let i = 0; i < this.data.length; i++) {
+ 
+    //   if(this.data[i] == item){
+    //     this.data.splice(i, 1);
+    //   }
+    
+    for(let i = 0; i < this.pets.length; i++) {
+ 
+      if(this.pets[i] == item){
+        this.pets.splice(i, 1);
+      }
+ 
+    }
   }
-  data = [];
+}
   
 //   removePost(post){
 //     let index = this.data.indexOf(post);
@@ -42,4 +71,3 @@ export class FavoritePage {
 //       this.data.splice(index, 1);
 //     }
 //     }
-}
