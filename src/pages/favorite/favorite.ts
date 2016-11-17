@@ -19,26 +19,29 @@ export class FavoritePage {
               public displayFav: FavoriteRest
               ) {
     this.navCtrl = navCtrl;
-    // displayFav.getPetInfo();
   }
   
+  // favArray = this.displayFav.getPetInfo(user_ID,token);
   
-    
-  ionViewDidLoad() {
-    
-    this.restorePets.getPetData(this.pets)
-  	    .map(res => res.json())
-  	    .subscribe(data => {
-  	      this.data = data;
-  	      console.log(data);
-    });
-  }
   
   pets = [{
     name: "",
     info: "",
     image: ""
   }]
+  
+  
+    
+  ionViewDidLoad() {
+    
+    this.displayFav.getPetInfo(window.localStorage.getItem("userId"), window.localStorage.getItem('token'))
+  	    .map(res => res.json())
+  	    .subscribe(data => {
+  	      this.pets = data;
+  	      console.log(this.pets);
+    });
+  }
+  
   
   // diplayFavorites() {
   //   this.displayFav();

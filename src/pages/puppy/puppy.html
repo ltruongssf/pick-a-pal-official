@@ -6,6 +6,32 @@
 </ion-header>
 
 
+<!--<ion-content> -->
+
+<!--<ion-card class="puppy-page" *ngFor="let pet of data">-->
+<!--  <img [src]="pet.image" class="card-image"/>-->
+<!--  <ion-card-content>-->
+<!--    <ion-card-title>-->
+<!--      {{pet.name}}-->
+<!--      </ion-card-title>-->
+<!--    <p>-->
+<!--      {{pet.info}}-->
+<!--    </p>-->
+<!--          <button ion-button icon-left (click)="archive(item)" class="buttons">-->
+<!--      <ion-icon name="star"></ion-icon>-->
+<!--      Archive-->
+<!--    </button>-->
+
+<!--        <button ion-button icon-right (click)="savePet(pet)" class="buttons">-->
+<!--        Favorite-->
+<!--        <ion-icon name="star"></ion-icon>-->
+<!--      </button>-->
+<!--  </ion-card-content>-->
+<!--</ion-card>-->
+
+<!--</ion-content>-->
+
+
 <ion-content>
   <ion-list>
   <ion-slides pager>
@@ -17,8 +43,8 @@
     <p [innerHTML]="pet.info"></p>
      
      
-     <!-- buttons for eah page that has left or right --> 
-         <button ion-button icon-left (click)="archive(item)">
+      <!--//buttons for eah page that has left or right -->
+         <button ion-button icon-left>
       <ion-icon name="star"></ion-icon>
       Archive
     </button>
@@ -28,9 +54,10 @@
         <ion-icon name="star"></ion-icon>
       </button>
 
-     
-     
 </ion-slide>
+</ion-slides>
+</ion-list>
+</ion-content>
 
 <!--<ion-item-options side="right">-->
 <!--  <button ion-button (click)="savePet(pet)">-->
@@ -48,6 +75,3 @@
 <!--  </button>-->
 <!--</ion-item-options>-->
 
-  </ion-slides>
-  </ion-list>
-</ion-content>

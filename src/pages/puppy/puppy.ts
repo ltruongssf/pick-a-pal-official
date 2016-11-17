@@ -25,7 +25,6 @@ export class PuppyPage {
   }
   
   ionViewDidLoad() {
-    
     this.restorePets.getPetData(this.pets)
   	    .map(res => res.json())
   	    .subscribe(data => {
@@ -33,6 +32,8 @@ export class PuppyPage {
   	      console.log(data);
     });
   }
+  
+  
  
   pets = {
     name: "",
@@ -41,15 +42,27 @@ export class PuppyPage {
     
   }
   
-  data = [];
+ data = [];
+ 
+ 
+ 
   
-  savePet(pet) {
+ savePet(pet) {
     this.restFav.savePetData({
-      user_ID: window.localStorage.getItem("user_ID"),
+      user_ID: window.localStorage.getItem("userId"),
       puppy_ID: pet.id
       
-    }, window.localStorage.getItem('token'));
+    }, window.localStorage.getItem('token'))
+    .map(res => res.json())
+    .subscribe(res => { 
+      console.log(res);
+    }, error => {
+      console.log(error);
+    });
 }
+ 
+  
+  
   archiveItem(item) {
     for(let i = 0; i < this.data.length; i++) {
  
