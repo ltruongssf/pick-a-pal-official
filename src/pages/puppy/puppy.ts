@@ -19,10 +19,7 @@ export class PuppyPage {
     this.navCtrl = navCtrl;
   }
   
-  mySlideOptions = {
-    initialSlide: 1,
-    loop: true
-  }
+  
   
   ionViewDidLoad() {
     this.restorePets.getPetData(this.pets)
