@@ -11,10 +11,6 @@
 
 
 <form #pass="ngForm" (ngSubmit)="changePassword(pass)" novalidate>
- <!-- <ion-item>
-    <ion-label color="primary" [(ngModel)]="user.password" required>Current Password</ion-label>
-    <ion-input></ion-input>
-  </ion-item> -->
   <ion-item>
     <ion-label color="primary">New Password</ion-label>
     <ion-input [(ngModel)]="user.password" name="password" required></ion-input>

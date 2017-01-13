@@ -27,3 +27,35 @@ export class StoreUserInfo {
         );
   }
 }
+
+//!!This one is for the id-sentral-app user-service!! 
+
+// import { Injectable } from '@angular/core';
+// import { Http, Headers } from '@angular/http';
+// import 'rxjs/add/operator/map';
+
+
+// @Injectable()
+// export class UserService {
+  
+//   private url = 'https://id-sentral-bk-3-jbrownssf.c9users.io:8080/api/appUsers';
+
+
+//   constructor(private http: Http) {
+//     console.log('Hello UserService Provider');
+//   }
+  
+//   registerUser(data) {
+//     return this.http.post('https://id-sentral-bk-3-jbrownssf.c9users.io:8080/api/appUsers/', data);
+//   }
+  
+//   loginUser(data) {
+//     return this.http.post('https://id-sentral-bk-3-jbrownssf.c9users.io:8080/api/appUsers/login', data);
+//   }
+  
+//   logoutUser(token) {
+//     return this.http.post(
+//       this.url + '/logout'+ '?access_token=' + token, {}
+//     );
+//   }
+// }

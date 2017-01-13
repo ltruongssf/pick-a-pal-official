@@ -15,10 +15,11 @@ import { StoreUserInfo } from '../providers/store-user-info';
 import { RestorePetInfo } from '../providers/restore-pet-info';
 import { changePassword } from '../providers/change-password';
 import { FavoriteRest } from '../providers/favorite-rest';
+import { MockDataPage } from '../pages/mock-data/mock-data';
 
 const injections = [MyApp, AboutPage, ContactPage, 
 FavoritePage, LandingPage, LobbyPage, LoginPage, PreLandingPage, 
-PuppyPage, RegisterPage, SettingsPage]
+PuppyPage, RegisterPage, SettingsPage, MockDataPage]
 
 
 

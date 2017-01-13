@@ -6,13 +6,11 @@ import 'rxjs/add/operator/map';
 export class changePassword {
 
   constructor(public http: Http) {
-
   }
-
+  
   changePass(credentials,userId) {
-    return this.http.patch("https://midterm-backend-ohheyitslisa.c9users.io/api/AppUsers/"+userId,
+    return this.http.patch("https://midterm-backend-ohheyitslisa.c9users.io/api/AppUsers/"+ userId,
         credentials
     );
   }
-
 }
