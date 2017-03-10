@@ -8,8 +8,7 @@ import { LobbyPage } from '../pages/lobby/lobby';
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = PreLandingPage;
-  // rootPage = window.localStorage.getItem("token") ? LobbyPage : PreLandingPage;
+  rootPage = window.localStorage.getItem("token") ? LobbyPage : PreLandingPage;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {

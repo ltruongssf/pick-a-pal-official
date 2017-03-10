@@ -15,11 +15,15 @@ import { StoreUserInfo } from '../providers/store-user-info';
 import { RestorePetInfo } from '../providers/restore-pet-info';
 import { changePassword } from '../providers/change-password';
 import { FavoriteRest } from '../providers/favorite-rest';
-import { MockDataPage } from '../pages/mock-data/mock-data';
+// import { FlickrService } from '../providers/flickr-service';
+import { PetImagePage } from '../pages/pet-image/pet-image';
+import { Photo } from './photo';
+
+
 
 const injections = [MyApp, AboutPage, ContactPage, 
 FavoritePage, LandingPage, LobbyPage, LoginPage, PreLandingPage, 
-PuppyPage, RegisterPage, SettingsPage, MockDataPage]
+PuppyPage, RegisterPage, SettingsPage, PetImagePage]
 
 
 

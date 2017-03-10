@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Pet slideshow</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-card *ngFor="let photo of photos">
+  <img src="{{photo.getUrl}}"/>
+    <ion-card-content>
+      <ion-card-title>
+      {{photo.title}}
+      </ion-card-title>
+    
+    </ion-card-content>
+  </ion-card>
+  
+  
+
+</ion-content>

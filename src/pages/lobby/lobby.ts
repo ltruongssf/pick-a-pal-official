@@ -6,7 +6,7 @@ import { FavoritePage } from '../favorite/favorite';
 import { StoreUserInfo } from '../../providers/store-user-info';
 import { SettingsPage } from '../settings/settings'; 
 import { RestorePetInfo } from '../../providers/restore-pet-info';
-
+import { PetImagePage } from '../pet-image/pet-image';
 
 @Component({
   selector: 'page-lobby',
@@ -23,13 +23,6 @@ export class LobbyPage {
     this.navCtrl = navCtrl;
  }
  
-    // puppy(){
-    //   this.petInfo.petPage();
-    //   this.navCtrl.push(PuppyPage, {
-    //     id: 1
-    // });
-    // } 
-    
     puppy() {
       this.navCtrl.push(PuppyPage); 
     }
@@ -42,6 +35,9 @@ export class LobbyPage {
     }
     settings() {
       this.navCtrl.push(SettingsPage);
+    }
+    images() {
+      this.navCtrl.push(PetImagePage);
     }
     
     
